@@ -28,8 +28,7 @@ const reducer =(state= initialState, action)=>{
 const Store = createStore(reducer);
 
 
-
-const MyComponent = () => {
+const App = () => {
     return(
        <Provider store={Store}>
          <CounterApp/>
@@ -47,4 +46,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default MyComponent;
+export default App;

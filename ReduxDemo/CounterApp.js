@@ -1,11 +1,10 @@
 //import liraries
-import React, { useState , Component} from 'react';
+import React, { Component} from 'react';
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 import { createStore } from 'redux';
 import {connect} from 'react-redux';
 
-
-// create a component
+// redux functionality with Class Components 
 class MyComponent extends Component{
    
     //state= {
@@ -25,6 +24,7 @@ class MyComponent extends Component{
 
     return (
         <SafeAreaView style={styles.container}>
+            <Text style={{fontSize:20, marginBottom:10, }}> Redux Counter </Text>
            <View style={styles.wrapperView}>
                <TouchableOpacity onPress={()=> this.props.increase()}>  
                    <Text style={{fontSize:20}}>Increase</Text>
@@ -45,14 +45,14 @@ class MyComponent extends Component{
 function mapStateToProps( state ){
     return{
        counter: state.counter 
-       //kinda replacing local state with this
+       // replacing local state with this
     }
 }
 function mapDispatchToProps( dispatch ){
 
     return{
         increase: ()=> dispatch({ type:'INCREASE_COUNTER' }),
-        decrease: ()=> dispatch({type: 'DECREASE_COUNTER'})
+        decrease: ()=> dispatch({type: 'DECREASE_COUNTER'}),
     }
 }
 
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     },
     wrapperView: {
         flexDirection:'row', width:300, justifyContent:'space-around', 
-        alignItems:'center'
+        alignItems:'center', marginTop:10
     }
 });
 
-export default connect(mapStateToProps)(mapDispatchToProps)(MyComponent);
+export default  connect(mapStateToProps, mapDispatchToProps)(MyComponent);
