@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "348401421302",
+    "project_id": "fir-storage-31a4c",
+    "storage_bucket": "fir-storage-31a4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348401421302:android:11c0ec82e49050575b55d7",
+        "android_client_info": {
+          "package_name": "com.cameraroll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348401421302-k4hi9fecc3moirtbh45o395a4mj6nog8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cameraroll",
+            "certificate_hash": "ac44a6320b113c01ce17bb2d177eec0248255364"
+          }
+        },
+        {
+          "client_id": "348401421302-aikqik4absikimsd6vla2hroti66q7pj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbbApw_IeF9GnKCAmgmIA2s2kqoilxYkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348401421302-aikqik4absikimsd6vla2hroti66q7pj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

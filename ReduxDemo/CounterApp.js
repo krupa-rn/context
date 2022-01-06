@@ -1,7 +1,6 @@
 //import liraries
 import React, { Component} from 'react';
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
-import { createStore } from 'redux';
 import {connect} from 'react-redux';
 
 // redux functionality with Class Components 
