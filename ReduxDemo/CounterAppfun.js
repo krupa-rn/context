@@ -7,20 +7,20 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const CounterAppFun =()=>{
      
-    const [count, setCount] = useState(0);
-    const counter = useSelector(state=> state.counter)
+    const [count, setCount] = useState(0);   //local state
+    const counter = useSelector(state=> state.counter)  //global state
     return(
         <SafeAreaView style={styles.container}>
         <Text style={{fontSize:20, marginBottom:10, }}> Redux Counter </Text>
         
         <View style={styles.wrapperView}>
-           <TouchableOpacity onPress={()=> this.props.increase()}>  
+           <TouchableOpacity onPress={()=> useDispatch( increase())}>  
                <Text style={{fontSize:20}}>Increase</Text>
            </TouchableOpacity>
              
-           <Text style={styles.reduxCounter}> {this.props.counter} </Text>
+           <Text style={styles.reduxCounter}> {counter} </Text>
 
-           <TouchableOpacity onPress={()=> this.props.decrease()}>
+           <TouchableOpacity onPress={()=> useDispatch(decrease())}>
                <Text style={{fontSize:20}}> Decrease </Text>
            </TouchableOpacity>
        </View>
